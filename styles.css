@@ -13,6 +13,7 @@
     --grey-border: #E5E7EB;
     --grey-input-bg: #fffefe;
     --green-link: #596D48;
+    --dark-green-link: #516341;
     --red-error: #B91C1C;
     --blue-focus: #1D4ED8;
     --light-bg: #F9FAFB;
@@ -37,7 +38,7 @@ body {
     flex-direction: row;
     padding: 0;
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh;
     background-color: var(--light-bg);
 }
 
@@ -106,4 +107,80 @@ div {
 
 #right {
     width: 66.66vw;
+    justify-content: center;
+}
+
+.intro,
+.subtext,
+form>div {
+    padding-left: 46px;
+    padding-right: 46px;
+
+}
+
+.intro {
+    margin-bottom: 40px;
+    max-width: 84ch;
+}
+
+.form-full {
+    background-color: var(--light);
+    margin-bottom: 35px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+}
+
+.form-full h2 {
+    margin-bottom: 30px;
+}
+
+label {
+    color: var(--label-color);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
+
+}
+
+.input-line {
+    flex-direction: row;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+.input-line .input {
+    width: 264px;
+    margin-right: 72px;
+
+}
+
+.input-line .input input {
+    width: 100%;
+    padding: 6px 8px;
+    border: solid 1px var(--grey-border);
+    border-radius: 4px;
+    background-color: var(--grey-input-bg);
+}
+
+
+form button {
+    border: none;
+    background-color: var(--green-link);
+    border-radius: 7px;
+    color: white;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.20);
+    padding: 15px 55px;
+    width: 235px;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: var(--dark-green-link);
+}
+
+#right a {
+    color: var(--green-link);
+    font-weight: bold;
 }
