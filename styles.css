@@ -18,6 +18,7 @@
     --blue-focus: #1D4ED8;
     --light-bg: #F9FAFB;
     --label-color: #1F2937;
+    --grey-placeholder: #D8D8D8;
 
 }
 
@@ -134,6 +135,7 @@ form>div {
 
 .form-full h2 {
     margin-bottom: 30px;
+    color: var(--label-color);
 }
 
 label {
@@ -162,6 +164,15 @@ label {
     border: solid 1px var(--grey-border);
     border-radius: 4px;
     background-color: var(--grey-input-bg);
+    appearance: none;
+}
+
+.input-line .input input:user-invalid {
+    border-color: var(--red-error);
+}
+
+.input-line .input input::placeholder {
+    color: var(--grey-placeholder);
 }
 
 
@@ -175,12 +186,44 @@ form button {
     width: 235px;
 }
 
-form button:hover {
+form button:enabled:hover {
     cursor: pointer;
     background-color: var(--dark-green-link);
+}
+
+form button:disabled {
+    filter: grayscale(1);
 }
 
 #right a {
     color: var(--green-link);
     font-weight: bold;
+}
+
+.input-line .input input.error {
+    border-color: var(--red-error);
+
+}
+
+.input-line .input input::after {
+    content: "Password doesn't match confirmation";
+
+    font-size: large;
+    display: block;
+    position: absolute;
+    font-family: inherit;
+
+}
+
+#prompt {
+    display: none;
+    font-size: 11px
+}
+
+#prompt.visible {
+    display: inline;
+}
+
+#prompt.error-message {
+    color: var(--red-error);
 }
